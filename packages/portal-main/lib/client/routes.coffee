@@ -1,0 +1,10 @@
+Meteor.startup ->
+	Router.configure ->
+		layoutTemplate: 'im360_layout'
+	Router.map ->
+		@route 'home'
+		@route 'docs'
+		@route 'downloads'
+		@route 'tools'
+		@route 'forum'
+		@route 'answers'
