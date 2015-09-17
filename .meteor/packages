@@ -5,17 +5,20 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
+# autopublish
+# insecure
 coffeescript
 stylus
 mquandalle:jade
+twbs:bootstrap
 accounts-ui
 accounts-password
 sanjo:jasmine
 velocity:html-reporter
 johnantoni:meteor-stickynav
-twbs:bootstrap
 meteorhacks:fast-render
 iron:router
-aldeed:template-extension
+tinytest
+
+# Custom packages
+svalaer:portal-main

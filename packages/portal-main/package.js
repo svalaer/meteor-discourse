@@ -19,13 +19,16 @@ Package.onUse(function(api) {
     'mquandalle:jade'
   ]);
 
-  api.versionsFrom('1.1.0.3');
   api.addFiles([
-    'lib/client/routes.coffee',
+    // 'lib/client/stylesheets/main.styl',
+    'routes.coffee'
+  ], 'client', 'server');
+
+  api.addFiles([
     // 'lib/client/stylesheets/main.styl',
     'lib/client/templates/index.jade',
-    'lib/client/templates/index.coffee',
-  ], 'client', 'server');
+    'lib/client/templates/index.coffee'
+  ], 'client');
 });
 
 Package.onTest(function(api) {
