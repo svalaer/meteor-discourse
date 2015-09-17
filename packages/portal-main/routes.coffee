@@ -23,3 +23,7 @@ if Meteor.isClient
 			@render 'blog'
 		Router.route '/forum', ->
 			@render 'forum'
+
+		Router.current().path
+		Router.current().template
+		Router.current().params
