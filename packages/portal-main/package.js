@@ -10,8 +10,6 @@ Package.describe({
   documentation: 'README.md'
 });
 
-
-
 Package.onUse(function(api) {
   api.use([
     'twbs:bootstrap',
@@ -22,7 +20,12 @@ Package.onUse(function(api) {
   ]);
 
   api.versionsFrom('1.1.0.3');
-  api.addFiles('portal-main.js');
+  api.addFiles([
+    'lib/client/routes.coffee',
+    // 'lib/client/stylesheets/main.styl',
+    'lib/client/templates/index.jade',
+    'lib/client/templates/index.coffee',
+  ], 'client', 'server');
 });
 
 Package.onTest(function(api) {
