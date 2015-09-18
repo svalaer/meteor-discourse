@@ -12,7 +12,7 @@ if Meteor.isClient
 		Router.route '/', ->
 			@render 'im360_layout'
 		Router.route '/home', ->
-			@render 'home'
+			@render 'home',
 		Router.route '/docs', ->
 			@render 'docs'
 		Router.route '/downloads', ->

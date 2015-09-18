@@ -21,4 +21,4 @@ iron:router
 tinytest
 
 # Custom packages
-svalaer:portal-main
+#svalaer:portal-main

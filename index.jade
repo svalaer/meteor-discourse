@@ -1,0 +1,72 @@
+
+
+head
+	title im360
+	meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui")
+	meta(name="apple-mobile-web-app-capable" content="yes")
+	meta(name="mobile-web-app-capable" content="yes")
+
+template(name='im360_layout')
+	.container
+		header
+			+nav
+
+template(name='nav')
+	nav.navbar.navbar-default(type='navigation')
+		container-fluid
+			//- .navbar-header
+			//- 	button(type='button' class='navbar-toggle' data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
+			//- 		span.sr-only Toggle navigation 
+			//- 		span.icon-bar
+			//- 		span.icon-bar
+			//- 		span.icon-bar
+			//- 	+navBrand
+			//- 	
+			.collapse.navbar-collapse#bs-example-navbar-collapse-1
+				ul.nav.navbar-nav
+					+navItems
+					
+//- template(name='navBrand')
+//- 	a.navbar-brand(href="{{pathFor 'home'}}") IM 360
+
+template(name='navItems')
+	li(class="{{ activeIfTemplateIs 'home' }}")
+		a(href="{{ pathFor 'home'}}") IM 360
+	li(class="{{ activeIfTemplateIs 'docs' }}")
+		a(href="{{ pathFor 'docs'}}") Docs
+	li(class="{{ activeIfTemplateIs 'downloads' }}")
+		a(href="{{ pathFor 'downloads'}}") Downloads
+	li(class="{{ activeIfTemplateIs 'tools' }}")
+		a(href="{{ pathFor 'tools'}}") Tools
+	li(class="{{ activeIfTemplateIs 'blog' }}")
+		a(href="{{ pathFor 'blog'}}") Blog
+	li(class="{{ activeIfTemplateIs 'forum' }}")
+		a(href="{{ pathFor 'forum'}}") Forum
+
+template(name='home')
+	h2 Home
+	p You are on the home screen
+
+template(name='docs')
+	h2 Tools
+	p You are on the docs screen
+
+template(name='downloads')
+	h2 Downloads
+	p You are on the download screen
+
+template(name='tools')
+	h2 Tools
+	p You are on the tools screen
+
+template(name='blog')
+	h2 Blog
+	p Forum
+
+template(name='forum')
+	h2 Forum
+	p You are on the forum screen
+
+template(name='answers')
+	h2 Tools
+	p You are on the tools screen
